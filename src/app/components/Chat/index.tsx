@@ -20,15 +20,13 @@ const Chat: React.FC = () => {
         </p>
       </div>
       {isLoading && (
-        <div className="flex justify-center items-center mt-4">
-            <div className="flex flex-col justify-center items-center w-full">
-              <ReactLoading type={`bars`} width={`30%`} />
-            </div>
+        <div className="absolute top-1/2 left-1/4 transform -translate-x-1/2 -translate-y-1/2 flex flex-col justify-center items-center">
+              <ReactLoading type={`bars`} width={`300px`} height={`20px`}/>
         </div>
       )}
       {
         
-        <div className={`w-full pr-1 pl-1 ${isLoading ? "opacity-0 transition-all duration-1500 ease-out" : "opacity-100 transition-all duration-1500 ease-in"}`}>
+        <div className={`w-full pr-1 pl-1 opacity-100 transition-all duration-1500 ease-in`}>
           <form
             onSubmit={handleSubmit}
             className="mt-5 mb-5 relative bg-gray-700 rounded-lg"
