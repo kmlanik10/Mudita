@@ -13,7 +13,7 @@ const Chat: React.FC = () => {
   const [loading, setLoading] = useState(true);
 
   return (
-    <div id="chat" className="flex flex-col w-full lg:w-3/5 mr-4 mx-5 lg:mx-0">
+    <div id="chat" className="flex flex-col w-full lg:w-3/5 mr-4 mx-5 lg:mx-0 overflow-scroll">
       <div className="flex flex-col items-start lg:flex-row w-full lg:flex-wrap p-2">
         <p className="mt-2 text-white font-bold text-xl">
           Tell us things you hope to accomplish today and we will help you!
@@ -47,7 +47,7 @@ const Chat: React.FC = () => {
       }
       {
         messages.length > 0  && (
-          <div className={`w-full pr-1 pl-1 ${isLoading ? "opacity-0 transition-all duration-1500 ease-out" : "opacity-100 transition-all duration-1500 ease-in"}`}>
+          <div className={`w-full pr-1 pl-1`}>
             <Messages messages={messages} />
             <Button
               className="w-full mt-5 my-2 uppercase active:scale-[98%] transition-transform duration-100"
